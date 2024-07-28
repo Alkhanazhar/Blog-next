@@ -15,19 +15,52 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
+  .blog-content {
+    padding: 36px 0;
+  }
+  .blog-content b {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .blog-content p {
+    margin-bottom: 10px;
+  }
+  .blog-content h1 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 26px;
+  }
+  .blog-content h2 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 22px;
+  }
+  .blog-content h3 {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  body {
+    @apply antialiased scroll-smooth;
+  }
   .text-balance {
     text-wrap: balance;
+  }
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .btn-shadow {
+    @apply font-medium py-1 px-3 sm:py-3 sm:px-3 border border-solid border-black shadow-[-7px_7px_0px_#000000] active:shadow-[-4px_4px_0px_#000000] transition-all duration-150 active:-translate-x-1;
+  }
+  .shadow {
+    @apply shadow-[-7px_7px_0px_#000000];
+  }
+  .scrollhide::-webkit-scrollbar {
+    display: none;
   }
 }
