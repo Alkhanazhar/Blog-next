@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-around gap-2 sm:gap-0 sm:flex-row border-t p-5 py-2">
       <Logo />
-      <p className="text-sm text-white">
+      <p className="text-sm ">
         All right reserved &copy; opinion blogs{" "}
       </p>
       <Tags />

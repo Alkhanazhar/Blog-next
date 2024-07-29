@@ -9,7 +9,7 @@ import Tags from "@/components/shared/Tags";
 const BlogsData = ({ id }) => {
   const [blogData, setBlogsData] = useState([]);
   // fetching function
-  const fetchData = async () => {
+  const fetchData = async (id) => {
     const { data } = await axios.get(`/api/blog`, {
       params: {
         id: id,
@@ -20,8 +20,9 @@ const BlogsData = ({ id }) => {
 
   const { scrollYProgress } = useScroll();
   useEffect(() => {
+    console.log(id)
     window.scrollTo(0, 0);
-    fetchData();
+    fetchData(id);
   }, []);
 
   return blogData ? (
@@ -33,7 +34,7 @@ const BlogsData = ({ id }) => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        className="py-5 px-5 md:px-12 lg:px-28 bg-gray-200   "
+        className="py-5 px-5 md:px-12 lg:px-28 bg-gray-200  z-10 "
       >
         <div className="text-center pb-24  ">
           <p className="text-2xl font-semibold sm:text-5xl max-w-[700px] mx-auto ">
@@ -54,7 +55,7 @@ const BlogsData = ({ id }) => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        className="mx-5 max-w-[800px] md:mx-auto aspect-video  rounded-lg -mt-[100px]  py-10 "
+        className="mx-5 max-w-[800px] md:mx-auto aspect-video  rounded-lg -mt-[150px] z-[100]  py-10 "
       >
         <Image
           src={blogData.image}

@@ -5,30 +5,33 @@ const page = () => {
   return (
     <div className="overflow-y-hidden">
       <div className="min-h-screen bg-gray-100 p-6">
-        <header className="bg-gray-300 text-black shadow p-4 ">
+        <header className="border border-black text-black shadow p-4 ">
           <h1 className="text-2xl font-bold">Admin Dashboard</h1>
         </header>
-        <main className="mt-6 p-4 bg-white shadow ">
+        <main className="mt-6 p-4 border border-black  bg-white shadow ">
           <p className="text-lg flex gap-3 items-center ">
-            <MoveLeft /> You can also create your blogs here.
+            <MoveLeft /> Create Your New Blog .
           </p>
           {/* Additional content and functionality can be added here */}
 
           <section className="mb-4">
             <h2 className="text-xl font-semibold">Feature Overview</h2>
-            <ul className="list-disc list-inside text-gray-700 mt-2">
+            <ul className="text-gray-700 mt-2">
               <li>
-                User Management: Add, edit, or remove users from the system.
+                <strong>User Management</strong>: Add, edit, or remove users
+                from the system.
               </li>
               <li>
-                Content Creation: Create and manage blogs, articles, and other
-                content.
+                <strong>Content Creation:</strong> Create and manage blogs,
+                articles, and other content.
               </li>
               <li>
-                System Settings: Customize the settings of your application.
+                <strong>System Settings:</strong> Customize the settings of your
+                application.
               </li>
               <li>
-                Analytics: View detailed analytics and reports of user activity.
+                <strong>Analytics:</strong> View detailed analytics and reports
+                of user activity.
               </li>
             </ul>
           </section>
@@ -41,7 +44,7 @@ const page = () => {
             <button className="mt-4 outline-none border-none">
               <Link
                 href={"/admin/addBlogs"}
-                className="mt-4 bg-gray-600 text-white px-4 py-2 shadow hover:bg-gray-700"
+                className="mt-4 text-black border border-black  px-6 py-2 shadow"
               >
                 Create Blog
               </Link>

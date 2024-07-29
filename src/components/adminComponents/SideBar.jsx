@@ -25,7 +25,7 @@ const SideBar = () => {
       animate={{ x: "0", opacity: 1, duration: 3000 }}
       className="bg-slate-300 h-screen flex flex-col border-r-2 border-black overflow-hidden"
     >
-      <div className="px-2 sm:pl-12 py-3 border-b border-black ">
+      <div className="px-2 sm:pl-12 py-3 border-b border-black flex items-center justify-center ">
         <Logo />
       </div>
       <div className="py-12 h-full w-full">
@@ -44,7 +44,7 @@ const SideBar = () => {
                 href={"/admin/" + item.href}
                 className="shadow flex items-center py-4 justify-around cursor-pointer font-medium border border-black gap-3 mb-8 ml-10 border-r-0"
               >
-                <item.icon />
+                <item.icon className="hidden md:flex" />
                 <p>{item.title}</p>
               </Link>
             </motion.div>

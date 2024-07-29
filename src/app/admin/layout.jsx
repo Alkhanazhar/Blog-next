@@ -1,5 +1,6 @@
 "use client";
 import SideBar from "@/components/adminComponents/SideBar";
+import { UserButton } from "@clerk/nextjs";
 import { motion } from "framer-motion";
 import { User } from "lucide-react";
 import React from "react";
@@ -16,7 +17,7 @@ const layout = ({ children }) => {
         >
           <div className="flex justify-between w-full py-3 max-h-[60px] border-b px-12  border-black">
             <h3 className="font-medium text-xl">Admin Panel</h3>
-            <User />
+            <UserButton />
           </div>
           {children}
         </motion.div>

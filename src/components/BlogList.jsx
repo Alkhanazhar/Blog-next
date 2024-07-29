@@ -33,7 +33,7 @@ const BlogList = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        className="flex items-center justify-center my-10 gap-4 "
+        className="flex items-center justify-center my-10 gap-4 whitespace-nowrap "
       >
         {menuList?.map((item, index) => {
           return (
@@ -43,7 +43,7 @@ const BlogList = () => {
                 setMenu(item);
               }}
               className={`${
-                menu === item && "bg-black text-white px-4 py-1  rounded-sm"
+                menu === item && "bg-black text-white px-4 py-1  rounded-sm whitespace-nowrap"
               }`}
             >
               {item}

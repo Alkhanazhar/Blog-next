@@ -60,6 +60,9 @@
   .shadow {
     @apply shadow-[-7px_7px_0px_#000000];
   }
+   .shadow-2 {
+    @apply shadow-[-7px_-7px_0px_#000000];
+  }
   .scrollhide::-webkit-scrollbar {
     display: none;
   }
